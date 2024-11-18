@@ -20,3 +20,10 @@ func TestRoundTens(t *testing.T) {
 	result := RoundTens(123)
 	assert.Equal(t, float64(120), result, "Expected 120")
 }
+
+func TestCompareFloats(t *testing.T) {
+	a := 0.1 + 0.2
+	b := 0.3
+
+	assert.Equal(t, b, a)
+}
