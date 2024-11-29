@@ -1,5 +1,7 @@
 package utils
 
+import "strings"
+
 func Substr(s string, start int, length *int) string {
 	if start < 0 {
 		start = len(s) + start
@@ -19,4 +21,8 @@ func Substr(s string, start int, length *int) string {
 		end = len(s)
 	}
 	return s[start:end]
+}
+
+func Strpos(stringStr string, needle string) int {
+	return strings.LastIndex(stringStr, needle)
 }
