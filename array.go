@@ -1,6 +1,8 @@
 package utils
 
-import "strings"
+import (
+	"strings"
+)
 
 func InArray[T comparable](needle T, haystack []T) bool {
 	for _, item := range haystack {
@@ -31,4 +33,9 @@ func Slice(arr []int, start, length int) []int {
 		end = len(arr)
 	}
 	return arr[start:end]
+}
+
+func Isset(array map[any]any, key any) bool {
+	_, ok := array[key]
+	return ok
 }
