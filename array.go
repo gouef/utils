@@ -18,3 +18,17 @@ func Explode(separator string, stringStr string) []string {
 func Implode(separator string, elements []string) string {
 	return strings.Join(elements, separator)
 }
+
+func Slice(arr []int, start, length int) []int {
+	if start < 0 {
+		start = len(arr) + start
+	}
+	end := start + length
+	if start < 0 || start > len(arr) || end < 0 {
+		return nil
+	}
+	if end > len(arr) {
+		end = len(arr)
+	}
+	return arr[start:end]
+}
