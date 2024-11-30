@@ -35,7 +35,7 @@ func Slice(arr []int, start, length int) []int {
 	return arr[start:end]
 }
 
-func Isset(array map[any]any, key any) bool {
+func Isset(array map[interface{}]interface{}, key any) bool {
 	_, ok := array[key]
 	return ok
 }
