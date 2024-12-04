@@ -1,4 +1,4 @@
-module github.com/Gouef/utils
+module github.com/gouef/utils
 
 go 1.23.2
 
