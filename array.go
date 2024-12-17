@@ -14,6 +14,10 @@ func InArray[T comparable](needle T, haystack []T) bool {
 }
 
 func Explode(separator string, stringStr string) []string {
+	if separator == "" {
+		return []string{stringStr}
+	}
+
 	return strings.Split(stringStr, separator)
 }
 
