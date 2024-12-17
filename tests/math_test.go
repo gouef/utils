@@ -22,6 +22,11 @@ func TestRoundTens(t *testing.T) {
 	assert.Equal(t, float64(120), result, "Expected 120")
 }
 
+func TestRoundHundreds(t *testing.T) {
+	result := utils.RoundHundreds(123)
+	assert.Equal(t, float64(100), result, "Expected 100")
+}
+
 func TestCompareFloats(t *testing.T) {
 	a := 0.1 + 0.2
 	b := 0.3
