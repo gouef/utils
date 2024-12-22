@@ -13,6 +13,17 @@ func InArray[T comparable](needle T, haystack []T) bool {
 	return false
 }
 
+func InListArray[T comparable](needles []T, haystack []T) bool {
+
+	for _, needle := range needles {
+		if InArray(needle, haystack) {
+			return true
+		}
+	}
+
+	return false
+}
+
 func Explode(separator string, stringStr string) []string {
 	if separator == "" {
 		return []string{stringStr}
