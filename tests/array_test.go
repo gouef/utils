@@ -26,6 +26,27 @@ func TestInArray(t *testing.T) {
 	}
 }
 
+func TestInListArray(t *testing.T) {
+	tests := []struct {
+		needle   []string
+		haystack []string
+		expected bool
+	}{
+		{[]string{"apple"}, []string{"apple", "banana", "cherry"}, true},
+		{[]string{"cherry"}, []string{"apple", "banana", "cherry"}, true},
+		{[]string{"pineapple", "banana"}, []string{"apple", "banana", "cherry", "pineapple"}, true},
+		{[]string{"orange"}, []string{"apple", "banana", "cherry"}, false},
+		{[]string{""}, []string{"apple", "banana", "cherry"}, false},
+	}
+
+	for _, tt := range tests {
+		t.Run(utils.Implode("-", tt.needle), func(t *testing.T) {
+			result := utils.InListArray(tt.needle, tt.haystack)
+			assert.Equal(t, tt.expected, result)
+		})
+	}
+}
+
 func TestExplode(t *testing.T) {
 	tests := []struct {
 		separator string
