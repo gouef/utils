@@ -8,7 +8,7 @@ utils
 [![Go Report Card](https://goreportcard.com/badge/github.com/gouef/utils)](https://goreportcard.com/report/github.com/gouef/utils)
 [![codecov](https://codecov.io/github/gouef/utils/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/utils)
 
-## Vesions
+## Versions
 ![Stable Version](https://img.shields.io/github/v/release/gouef/utils?label=Stable&labelColor=green)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/utils?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/utils?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
