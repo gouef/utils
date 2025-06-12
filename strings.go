@@ -52,3 +52,7 @@ func Strncmp(s1, s2 string, n int) int {
 func StringCompare(s1, s2 string, n int) int {
 	return Strncmp(s1, s2, n)
 }
+
+func StringJoin(values []string) string {
+	return strings.Join(values, " ")
+}
